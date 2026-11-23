@@ -244,11 +244,11 @@ def wrap(text, key, size, width):
     return lines
 
 # ------------------------------------------------------------------ content
-DECK = ("COP31 ends with no fossil-fuel deal \u00b7 Russian warship sinks off Libya \u00b7 Seoul slides on AI fears "
+DECK = ("COP31 ends with no fossil-fuel deal \u00b7 Russian warship sinks off Libya \u00b7 Asian markets tumble on AI fears "
         "\u00b7 Trump hosts third meme-coin gala")
 
 STATS = [
-    ("0", "deals adopted at COP31 as the gavel finally falls"),
+    ("0", "deals adopted as COP31's gavel finally fell"),
     ("2", "Russian ships hit off Libya; one sinks at Benghazi"),
     ("-3.4%", "Seoul's KOSPI slides on AI-bubble fears"),
     ("258", "Democratic seats as the House map settles"),
@@ -258,12 +258,14 @@ STATS = [
 
 TIMELINE = [
     ("00:03", "Cameroon's ex-rebels: broken promises"),
-    ("00:18", "Seoul's KOSPI slides on AI fears"),
+    ("00:18", "Asian markets tumble on AI fears"),
     ("00:25", "Molly Meldrum dies, 83"),
     ("00:31", "Trump's third meme-coin gala"),
     ("00:39", "WHO plea amid Congo fighting"),
     ("00:50", "COP31 no-deal confirmed"),
-    ("01:07", "Iowa blast order stands"),
+    ("01:43", "House demolitions in south Lebanon"),
+    ("01:51", "Libya's military 'fully prepared'"),
+    ("01:53", "Poland: Russian assassin plot revealed"),
 ]
 
 HEROES = [
@@ -282,7 +284,7 @@ HEROES = [
          src="Guardian \u00b7 Reuters \u00b7 Al Jazeera", scene="ship"),
     dict(n=3, region="ASIA", topic="MARKETS", place="SEOUL, SOUTH KOREA",
          tag="KOSPI -3.4%",
-         head="Seoul slides as AI-bubble fear grips Asia's markets",
+         head="Asian markets tumble as AI-bubble fear grips Asia",
          body=("The KOSPI tumbled in early trade, extending a global tech selloff, days after the education "
                "minister quit over an AI exam-cheating scandal in the entrance tests."),
          src="Yonhap \u00b7 Reuters \u00b7 Al Jazeera", scene="chart"),
@@ -329,35 +331,35 @@ CARDS = [
 
 BRIEFS = [
     ("NEW YORK", "AMERICAS", "Mets reportedly agree $450m deal with Tarik Skubal, richest for a pitcher", "Guardian"),
+    ("WARSAW", "EUROPE", "Poland: Russia tried to assassinate a Ukrainian rapper twice", "Guardian"),
+    ("TRIPOLI", "AFRICA", "Libya's military 'fully prepared' after the Benghazi attacks", "Al Jazeera"),
+    ("SOUTH LEBANON", "MIDEAST", "Israeli forces continue house demolitions", "Al Jazeera"),
     ("LONDON", "EUROPE", "UK-EU food deal hailed by British firms: 'We're pretty aligned anyway'", "Guardian"),
     ("MIDLAND", "AMERICAS", "US Army to detonate tonnes of unstable explosives in Iowa despite court order", "BBC"),
-    ("YAOUND\u00c9", "AFRICA", "Cameroon's ex-rebels caught between hiding and broken promises", "Al Jazeera"),
+    ("YAOUNDÉ", "AFRICA", "Cameroon's ex-rebels caught between hiding and broken promises", "Al Jazeera"),
     ("SEATTLE", "AMERICAS", "Officials condemn 'horrific' ICE arrests at the city's airport", "Al Jazeera"),
-    ("HULL", "EUROPE", "McBurnie's added-time double shocks 10-man Brighton", "Guardian"),
     ("LAS VEGAS", "AMERICAS", "Gerwyn Price ends his barren run with Grand Slam of Darts win", "Guardian"),
     ("MADRID", "EUROPE", "Barcelona roar back from two goals down to sink Villarreal", "Guardian"),
     ("CHIEFS", "AMERICAS", "NFL: Chiefs, Lions and Bills march on; Metcalf ejected for eye poke", "Guardian"),
     ("WASHINGTON", "AMERICAS", "Heartbreak in the capital as Washington Spirit lose the NWSL final", "Al Jazeera"),
     ("ZANZIBAR", "AFRICA", "Fire breaks out at a popular tourist hotspot; no toll yet", "Al Jazeera"),
-    ("IZMIR", "EUROPE", "Lion on the loose in T\u00fcrkiye sparks fear among residents", "Al Jazeera"),
-    ("ANKARA", "EUROPE", "Mystery of the red stream in T\u00fcrkiye", "Al Jazeera"),
+    ("IZMIR", "EUROPE", "Lion on the loose in Türkiye sparks fear among residents", "Al Jazeera"),
+    ("ANKARA", "EUROPE", "Mystery of the red stream in Türkiye", "Al Jazeera"),
     ("BRUSSELS", "EUROPE", "Court bans China's BYD from selling its 'Defender clone' in the EU", "Guardian"),
     ("DELHI", "ASIA", "Opposition youth wing warns of more Meta protests after police clashes", "Guardian"),
     ("MANASSAS", "AMERICAS", "Virginia reports 2026's first measles-linked death, a child under 5", "Al Jazeera"),
     ("NEW YORK", "AMERICAS", "Aber Kawas becomes first Palestinian in New York state Senate history", "Al Jazeera"),
-    ("LONDON", "EUROPE", "UK taxpayers held more than \u00a31tn in offshore tax havens, HMRC data shows", "Guardian"),
+    ("LONDON", "EUROPE", "UK taxpayers held more than £1tn in offshore tax havens, HMRC data shows", "Guardian"),
     ("JERUSALEM", "MIDEAST", "Likud and Eisenkot's Yashar end coalition talks without a deal", "Al Jazeera"),
     ("SEOUL", "ASIA", "Education minister had quit over AI exam cheating before the market slid", "Guardian"),
     ("CANBERRA", "OCEANIA", "Liberals demand Bowen resign over the COP31 'disaster'", "Guardian"),
-    ("SERBIA", "EUROPE", "Editorial: a generational opportunity in Serbia's new political era", "Guardian"),
-    ("BERLIN", "EUROPE", "Outrage over a military AI event at the city's arts complex", "Guardian"),
-    ("WASHINGTON", "AMERICAS", "Intel chief says he trusts Trump's word that Putin is 'my friend'", "Guardian"),
+    ("ROME", "EUROPE", "Paolo Bulgari, the Italian jeweller, dies aged 89", "BBC"),
 ]
 
 DATECHECK = [
     ("SUN 22", "COP31 talks broke down late Sunday; Iran said it hit two US radars in Bahrain; Russia's 186-drone barrage; Hong Kong's poll; India 720/9; Verstappen's Vegas win"),
     ("FRI 21", "'El Chapo Isidro' arrest; Zelensky on the Crimean Bridge strikes"),
-    ("FRI 20", "Peru quake toll revised; the Barfas boat disaster; Voyager's light-day milestone"),
+    ("FRI 20", "Peru quake toll revised; the Baleas boat disaster; Voyager's light-day milestone"),
     ("SUN 22", "Sparta II ablaze in the Gulf of Finland - first report Sunday, still burning"),
 ]
 
@@ -376,7 +378,14 @@ PRESS = "05:40 UTC, MON 23 NOV 2026"
 def scene_cop31(x, y, w, h):
     fill_rect(x, y, w, h, SKY)
     # sun
-    fill_circle(x + int(w * 0.82), y + int(h * 0.28), 14, GOLD)
+    fill_circle(x + int(w * 0.86), y + int(h * 0.30), 12, GOLD)
+    # globe
+    gx, gy, gr = x + int(w * 0.16), y + int(h * 0.55), int(h * 0.42)
+    fill_circle(gx, gy, gr, (46, 96, 150))
+    fill_poly([(gx - gr, gy), (gx - gr * 0.5, gy - gr * 0.55), (gx + gr * 0.1, gy - gr * 0.4),
+               (gx + gr * 0.5, gy - gr * 0.05), (gx + gr * 0.2, gy + gr * 0.4), (gx - gr * 0.4, gy + gr * 0.5)], GRASS)
+    fill_rect(gx - gr, gy - 1, 2 * gr, 2, (30, 62, 96))
+    fill_rect(gx - 1, gy - gr, 2, 2 * gr, (30, 62, 96))
     # table
     ty = y + int(h * 0.72)
     fill_rect(x + int(w * 0.08), ty, int(w * 0.84), 10, (94, 66, 40))
@@ -693,7 +702,7 @@ def heroes(y):
         hline(int(x), int(x + cw), ly + 4, RULE2, 1)
         # headline
         hy = ly + 16
-        hls = wrap(st["head"], "gsb", 21, cw - 2)[:2]
+        hls = wrap(st["head"], "gsb", 20, cw - 2)[:2]
         for j, ln in enumerate(hls):
             draw_text(buf, int(x), hy + j * 23, ln, "gsb", 20, INK)
         # body
